@@ -3,8 +3,9 @@ const express = require('express');
 const Contact = require('../models/Contact');
 const ContactRouter = express.Router();
 
-ContactRouter.post('/add',ContactCtrl.postContact)
-ContactRouter.get('/', ContactCtrl.getAllContacts)
-ContactRouter.get('/find/:nom', ContactCtrl.getContacts)
+ContactRouter.post('/add',ContactCtrl.postContact);
+ContactRouter.get('/', ContactCtrl.getAllContacts);
+ContactRouter.get('/find/:nom', ContactCtrl.getContacts);
+ContactRouter.get('/delete/:id', ContactCtrl.getDeletedContact);
 
 module.exports = ContactRouter;
