@@ -5,8 +5,6 @@ const ContactSchema = mongoose.Schema({
     prenom: {type: String},
     telephone: {type: String, required: true},
     email: {type: String, required: true},
-    taches: {type: String},
-    projets: {type: String}
 })
 
 module.exports = mongoose.model('Contact', ContactSchema);
